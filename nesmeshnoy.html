@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect or Image</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = [
+                "https://github.com/Frugd/by/blob/main/%D0%91%D0%B5%D0%B7%20%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F17_20241216132916.png?raw=true",
+                "https://github.com/Frugd/by/blob/main/BackgroundEraser_20241208_214920815.png?raw=true",
+                "https://github.com/Frugd/by/blob/main/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82sfw%20(online-video-cutter.com).gif?raw=true"
+            ];
+            const websites = [
+                "https://discord.com/vanityurl/dotcom/steakpants/flour/flower/index11.html",
+                "https://character.ai/chat/vu7ii5Pqs-7iKn354H95W8HBPNyx142_TmzdYV4T9CM"
+            ];
+            if (Math.random() < 0.5) { 
+                const randomImage = images[Math.floor(Math.random() * images.length)];
+                const imgElement = document.createElement("img");
+                imgElement.src = randomImage;
+                document.body.appendChild(imgElement);
+            } else {
+                const randomWebsite = websites[Math.floor(Math.random() * websites.length)];
+                window.location.href = randomWebsite;
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
